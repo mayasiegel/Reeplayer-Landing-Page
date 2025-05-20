@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
@@ -11,27 +13,33 @@ export default function LandingPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-2 font-bold text-xl">
+        <div className="container flex h-20 items-center justify-between px-6 md:px-12">
+          <div className="flex items-center gap-3 font-bold text-2xl">
             <span className="text-[#2563EB]">Reeplayer</span>
             <span>Sponsorships</span>
           </div>
-          <nav className="hidden md:flex gap-6">
-            <Link href="#benefits" className="text-sm font-medium hover:text-[#2563EB]">
+          <nav className="hidden md:flex gap-8">
+            <Link href="#benefits" className="text-sm md:text-base font-semibold hover:text-[#2563EB] hover:underline underline-offset-8 transition-colors duration-150">
               Benefits
             </Link>
-            <Link href="#how-it-works" className="text-sm font-medium hover:text-[#2563EB]">
+            <Link href="#how-it-works" className="text-sm md:text-base font-semibold hover:text-[#2563EB] hover:underline underline-offset-8 transition-colors duration-150">
               How It Works
             </Link>
-            <Link href="#ad-formats" className="text-sm font-medium hover:text-[#2563EB]">
+            <Link href="#ad-formats" className="text-sm md:text-base font-semibold hover:text-[#2563EB] hover:underline underline-offset-8 transition-colors duration-150">
               Ad Formats
             </Link>
-            <Link href="#faq" className="text-sm font-medium hover:text-[#2563EB]">
+            <Link href="#faq" className="text-sm md:text-base font-semibold hover:text-[#2563EB] hover:underline underline-offset-8 transition-colors duration-150">
               FAQ
             </Link>
           </nav>
-          <div>
-            <Button className="bg-[#2563EB] hover:bg-[#1d4ed8]">
+          <div className="flex items-center">
+            <Button
+              className="bg-[#2563EB] hover:bg-[#1d4ed8] text-white px-6 py-2 rounded-md shadow-md font-semibold transition-colors duration-150"
+              onClick={() => {
+                const el = document.getElementById('signup-section');
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               Become a Sponsor
             </Button>
           </div>
@@ -39,40 +47,32 @@ export default function LandingPage() {
       </header>
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 relative">
+        <section className="w-full py-12 md:py-24 lg:py-32 relative flex items-center justify-center min-h-[400px] bg-slate-50">
           <div className="absolute inset-0 z-0">
-            <Image
-              src="/placeholder.svg?height=1080&width=1920"
-              alt="Soccer field with players"
-              fill
-              className="object-cover brightness-50"
-              priority
-            />
+            {/* Image or graphic can be added here later */}
           </div>
-          <div className="container relative z-10 px-4 md:px-6">
-            <div className="max-w-3xl space-y-4 text-white">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                Local Businesses: Sponsor Live Youth Soccer
-              </h1>
-              <p className="max-w-[600px] text-white/90 md:text-xl">
-                Connect with families and fans by sponsoring live-streamed youth soccer games. Support local teams while
-                growing your business.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-[#2563EB] hover:bg-[#1d4ed8]">
-                  Become a Sponsor <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-                <Button className="text-white border-white hover:bg-white/10">
-                  Learn More
-                </Button>
-              </div>
-            </div>
+          <div className="container mx-auto relative z-10 px-4 md:px-6 flex flex-col items-start justify-center text-left max-w-3xl ml-8">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter text-black mb-6">
+              Local Businesses: Sponsor Live Youth Soccer
+            </h1>
+            <p className="max-w-xl text-lg md:text-xl text-black/80 mb-8">
+              Connect with families and fans by sponsoring live-streamed youth soccer games. Support local teams while growing your business.
+            </p>
+            <Button
+              className="bg-[#2563EB] hover:bg-[#1d4ed8] text-white px-8 py-3 rounded-lg font-semibold text-lg shadow transition-colors duration-150"
+              onClick={() => {
+                const el = document.getElementById('signup-section');
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              Become a Sponsor
+            </Button>
           </div>
         </section>
 
         {/* Benefits Section */}
         <section id="benefits" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -83,7 +83,7 @@ export default function LandingPage() {
                 </p>
               </div>
             </div>
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-3 mt-12">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-3 mt-12 max-w-5xl mx-auto">
               <div className="flex flex-col items-center space-y-4 rounded-lg border p-6">
                 <div className="rounded-full bg-[#2563EB]/10 p-4">
                   <Users className="h-6 w-6 text-[#2563EB]" />
@@ -117,7 +117,7 @@ export default function LandingPage() {
 
         {/* How It Works Section */}
         <section id="how-it-works" className="w-full py-12 md:py-24 lg:py-32 bg-slate-50">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">How It Works</h2>
@@ -160,7 +160,7 @@ export default function LandingPage() {
 
         {/* Sponsorship Options */}
         <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -171,7 +171,7 @@ export default function LandingPage() {
                 </p>
               </div>
             </div>
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 mt-12">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 mt-12 max-w-5xl mx-auto">
               <div className="flex flex-col rounded-lg border p-6">
                 <div className="mb-4">
                   <h3 className="text-lg font-bold">10 streams</h3>
@@ -225,7 +225,7 @@ export default function LandingPage() {
 
         {/* Ad Formats Section */}
         <section id="ad-formats" className="w-full py-12 md:py-24 lg:py-32 bg-slate-50">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -236,7 +236,7 @@ export default function LandingPage() {
                 </p>
               </div>
             </div>
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-4 mt-12">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-4 mt-12 max-w-5xl mx-auto">
               <div className="flex flex-col items-center space-y-4 rounded-lg border bg-white p-6">
                 <div className="aspect-video w-full bg-slate-100 rounded-md flex items-center justify-center">
                   <Play className="h-8 w-8 text-slate-400" />
@@ -248,9 +248,7 @@ export default function LandingPage() {
               </div>
               <div className="flex flex-col items-center space-y-4 rounded-lg border bg-white p-6">
                 <div className="aspect-video w-full bg-slate-100 rounded-md flex items-center justify-center">
-                  <div className="h-1/4 w-full bg-slate-200 absolute bottom-0 flex items-center justify-center">
-                    <span className="text-xs text-slate-400">Banner Ad</span>
-                  </div>
+                  <span className="text-xs text-slate-400">Banner Ad</span>
                 </div>
                 <h3 className="text-lg font-bold">Banner Overlay</h3>
                 <p className="text-center text-sm text-muted-foreground">
@@ -297,8 +295,8 @@ export default function LandingPage() {
         </section>
 
         {/* Sign Up Form Section */}
-        <section id="signup" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
+        <section id="signup-section" className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-8">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -309,126 +307,151 @@ export default function LandingPage() {
                 </p>
               </div>
             </div>
-
-            <div className="mx-auto max-w-2xl rounded-lg border bg-card text-card-foreground shadow-sm">
-              <div className="p-6 space-y-6">
-                <form
-                  action="https://formspree.io/f/xvgayqrk"
-                  method="POST"
-                  className="space-y-4"
-                >
-                  {/* redirect back to #signup with a success flag */}
-                  <input
-                    type="hidden"
-                    name="_next"
-                    value={`${typeof window !== 'undefined' ? window.location.origin : ''}/#signup?submitted=1`}
+            <div className="mx-auto max-w-2xl rounded-2xl border bg-white shadow-lg p-8">
+              <form
+                action="https://formspree.io/f/xvgayqrk"
+                method="POST"
+                className="space-y-6"
+              >
+                <div>
+                  <label htmlFor="business-name" className="block text-sm font-medium mb-1">
+                    Business Name
+                  </label>
+                  <Input
+                    id="business-name"
+                    name="businessName"
+                    placeholder="Your business name"
+                    required
+                    className="w-full rounded-md border px-3 py-2"
                   />
-
-                  <div className="space-y-2">
-                    <label htmlFor="business-name" className="text-sm font-medium">
-                      Business Name
-                    </label>
-                    <Input
-                      id="business-name"
-                      name="businessName"
-                      placeholder="Your business name"
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium mb-1">
+                    Email
+                  </label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="you@example.com"
+                    required
+                    className="w-full rounded-md border px-3 py-2"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium mb-1">
+                    Phone
+                  </label>
+                  <Input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="(555) 555-5555"
+                    className="w-full rounded-md border px-3 py-2"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="location" className="block text-sm font-medium mb-1">
+                    Business Location
+                  </label>
+                  <Input
+                    id="location"
+                    name="location"
+                    placeholder="City, State"
+                    className="w-full rounded-md border px-3 py-2"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="business-type" className="block text-sm font-medium mb-1">
+                    Business Type
+                  </label>
+                  <div className="relative">
+                    <select
+                      id="business-type"
+                      name="businessType"
+                      className="w-full rounded-md border px-3 py-3 pr-12 bg-white text-black focus:outline-none focus:ring-2 focus:ring-[#2563EB] focus:border-[#2563EB] transition appearance-none"
                       required
-                    />
+                      defaultValue=""
+                    >
+                      <option value="" disabled>Select business type</option>
+                      <option value="retail">Retail Store</option>
+                      <option value="restaurant">Restaurant/Food Service</option>
+                      <option value="service">Service Business</option>
+                      <option value="professional">Professional Services</option>
+                      <option value="sports">Sports/Recreation</option>
+                      <option value="other">Other</option>
+                    </select>
+                    <svg className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
                   </div>
-
-                  <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-medium">
-                      Email
-                    </label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      placeholder="you@example.com"
+                </div>
+                <div>
+                  <label htmlFor="team-preference" className="block text-sm font-medium mb-1">
+                    Team Preference
+                  </label>
+                  <Input
+                    id="team-preference"
+                    name="teamPreference"
+                    placeholder="Do you have a specific team in mind?"
+                    className="w-full rounded-md border px-3 py-2"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="team-name" className="block text-sm font-medium mb-1">
+                    Team Name (if applicable)
+                  </label>
+                  <Input
+                    id="team-name"
+                    name="teamName"
+                    placeholder="Name of the team you'd like to sponsor"
+                    className="w-full rounded-md border px-3 py-2"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="budget" className="block text-sm font-medium mb-1">
+                    Estimated Monthly Budget
+                  </label>
+                  <div className="relative">
+                    <select
+                      id="budget"
+                      name="budget"
+                      className="w-full rounded-md border px-3 py-3 pr-12 bg-white text-black focus:outline-none focus:ring-2 focus:ring-[#2563EB] focus:border-[#2563EB] transition appearance-none"
                       required
-                    />
+                      defaultValue=""
+                    >
+                      <option value="" disabled>Select budget range</option>
+                      <option value="under-200">Under $200</option>
+                      <option value="200-500">$200 – $500</option>
+                      <option value="500-1000">$500 – $1,000</option>
+                      <option value="over-1000">Over $1,000</option>
+                    </select>
+                    <svg className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
                   </div>
-
-                  <div className="space-y-2">
-                    <label htmlFor="phone" className="text-sm font-medium">
-                      Phone
-                    </label>
-                    <Input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      placeholder="(555) 555-5555"
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <label htmlFor="business-type" className="text-sm font-medium">
-                      Business Type
-                    </label>
-                    <Select name="businessType">
-                      <SelectTrigger id="business-type">
-                        <SelectValue placeholder="Select business type" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="retail">Retail Store</SelectItem>
-                        <SelectItem value="restaurant">Restaurant/Food Service</SelectItem>
-                        <SelectItem value="service">Service Business</SelectItem>
-                        <SelectItem value="professional">Professional Services</SelectItem>
-                        <SelectItem value="sports">Sports/Recreation</SelectItem>
-                        <SelectItem value="other">Other</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  <div className="space-y-2">
-                    <label htmlFor="budget" className="text-sm font-medium">
-                      Estimated Monthly Budget
-                    </label>
-                    <Select name="budget">
-                      <SelectTrigger id="budget">
-                        <SelectValue placeholder="Select budget range" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="under-200">Under $200</SelectItem>
-                        <SelectItem value="200-500">$200 – $500</SelectItem>
-                        <SelectItem value="500-1000">$500 – $1,000</SelectItem>
-                        <SelectItem value="over-1000">Over $1,000</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  <div className="space-y-2">
-                    <label htmlFor="message" className="text-sm font-medium">
-                      Additional Information (Optional)
-                    </label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      placeholder="Tell us more about your business and sponsorship goals..."
-                      className="min-h-[100px]"
-                    />
-                  </div>
-
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="marketing" name="marketing" />
-                    <label htmlFor="marketing" className="text-sm text-muted-foreground">
-                      I agree to receive marketing communications from Reeplayer
-                    </label>
-                  </div>
-
-                  <Button type="submit" className="w-full bg-[#2563EB] hover:bg-[#1d4ed8]">
-                    Submit Interest
-                  </Button>
-
-                  {/* thank‐you message on successful redirect */}
-                  {typeof window !== 'undefined' &&
-                    window.location.hash === '#signup?submitted=1' && (
-                      <p className="mt-4 text-green-600">
-                        Thanks! We've got your submission.
-                      </p>
-                    )}
-                </form>
-              </div>
+                </div>
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium mb-1">
+                    Additional Information (Optional)
+                  </label>
+                  <Textarea
+                    id="message"
+                    name="message"
+                    placeholder="Tell us more about your business and sponsorship goals..."
+                    className="w-full rounded-md border px-3 py-2 min-h-[100px]"
+                  />
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Checkbox id="marketing" name="marketing" />
+                  <label htmlFor="marketing" className="text-base text-muted-foreground font-medium">
+                    I agree to receive marketing communications from Reeplayer
+                  </label>
+                </div>
+                <Button type="submit" className="w-full bg-[#2563EB] hover:bg-[#1d4ed8] text-white font-semibold py-3 rounded-md shadow transition-colors duration-150">
+                  Submit Interest
+                </Button>
+              </form>
             </div>
           </div>
         </section>
@@ -436,13 +459,13 @@ export default function LandingPage() {
 
         {/* What Happens Next Section */}
         <section className="w-full py-12 md:py-24 lg:py-32 bg-slate-50">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">What happens next?</h2>
               </div>
             </div>
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-3 max-w-5xl mx-auto">
               <div className="flex flex-col items-start space-y-4 rounded-lg border bg-white p-6">
                 <div className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-red-100 text-red-600 font-bold">
                   1
@@ -479,7 +502,7 @@ export default function LandingPage() {
 
         {/* FAQ Section */}
         <section id="faq" className="w-full py-12 md:py-24 lg:py-32 bg-slate-900 text-white">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -529,7 +552,7 @@ export default function LandingPage() {
 
         {/* CTA Section */}
         <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -539,11 +562,17 @@ export default function LandingPage() {
                   Join our pilot program today and be among the first businesses to sponsor youth soccer livestreams
                 </p>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-[#2563EB] hover:bg-[#1d4ed8]">
-                  Become a Sponsor <ArrowRight className="ml-2 h-4 w-4" />
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+                <Button
+                  className="bg-[#2563EB] hover:bg-[#1d4ed8] text-white px-8 py-3 rounded-lg font-semibold text-lg shadow transition-colors duration-150"
+                  onClick={() => {
+                    const el = document.getElementById('signup-section');
+                    if (el) el.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
+                  Become a Sponsor
                 </Button>
-                <Button>
+                <Button className="bg-white border border-[#2563EB] text-[#2563EB] px-8 py-3 rounded-lg font-semibold text-lg shadow hover:bg-[#2563EB] hover:text-white transition-colors duration-150">
                   Contact Sales
                 </Button>
               </div>
@@ -552,7 +581,7 @@ export default function LandingPage() {
         </section>
       </main>
       <footer className="w-full border-t py-6 md:py-0 bg-slate-50">
-        <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
+        <div className="container mx-auto flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
           <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
             © {new Date().getFullYear()} Reeplayer. All rights reserved.
           </p>
