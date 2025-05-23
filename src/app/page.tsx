@@ -201,6 +201,16 @@ export default function LandingPage() {
                 </p>
               </div>
             </div>
+            <div className="mx-auto rounded-xl overflow-hidden w-[900px] mt-12">
+              <Image
+                src="/live.png"
+                alt="Soccer game livestream with sponsor overlay"
+                width={900}
+                height={506}
+                className="w-full h-auto"
+                priority
+              />
+            </div>
           </div>
         </section>
 
@@ -212,57 +222,63 @@ export default function LandingPage() {
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                   How many streams do you want to sponsor?
                 </h2>
-                <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="mx-auto text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Choose the package that fits your marketing goals and budget
                 </p>
               </div>
             </div>
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 mt-12 max-w-5xl mx-auto">
-              <div className="flex flex-col rounded-lg border p-6">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5 mt-12 max-w-5xl mx-auto items-stretch">
+              <div className="flex flex-col rounded-lg border p-6 h-full">
                 <div className="mb-4">
-                  <h3 className="text-lg font-bold">10 streams</h3>
+                  <h3 className="text-lg font-bold">4 streams</h3>
                   <p className="text-sm text-muted-foreground">Perfect for a quick test</p>
                 </div>
                 <div className="mt-auto">
-                  <p className="text-2xl font-bold">$199</p>
-                  <p className="text-sm text-muted-foreground">$19.90 per stream</p>
-                  <Button className="w-full mt-4 bg-orange-500 hover:bg-orange-600">Select</Button>
+                  <p className="text-2xl font-bold">$99</p>
+                  <p className="text-sm text-muted-foreground">$24.75 per stream</p>
                 </div>
               </div>
-              <div className="flex flex-col rounded-lg border p-6 border-white shadow-md relative">
+              <div className="flex flex-col rounded-lg border p-6 border-white shadow-md relative h-full">
                 <div className="absolute -top-3 right-4 bg-white text-black text-xs px-3 py-1 rounded-full">
                   Popular
                 </div>
                 <div className="mb-4">
-                  <h3 className="text-lg font-bold">25 streams</h3>
+                  <h3 className="text-lg font-bold">12 streams</h3>
                   <p className="text-sm text-muted-foreground">Our most popular option</p>
                 </div>
                 <div className="mt-auto">
-                  <p className="text-2xl font-bold">$399</p>
-                  <p className="text-sm text-muted-foreground">$15.96 per stream</p>
-                  <Button className="w-full mt-4 bg-orange-500 hover:bg-orange-600">Select</Button>
+                  <p className="text-2xl font-bold">$420</p>
+                  <p className="text-sm text-muted-foreground">$35 per stream</p>
                 </div>
               </div>
-              <div className="flex flex-col rounded-lg border p-6">
+              <div className="flex flex-col rounded-lg border p-6 h-full">
                 <div className="mb-4">
-                  <h3 className="text-lg font-bold">50 streams</h3>
+                  <h3 className="text-lg font-bold">24 streams</h3>
                   <p className="text-sm text-muted-foreground">Best value for regular sponsors</p>
                 </div>
                 <div className="mt-auto">
-                  <p className="text-2xl font-bold">$699</p>
-                  <p className="text-sm text-muted-foreground">$13.98 per stream</p>
-                  <Button className="w-full mt-4 bg-orange-500 hover:bg-orange-600">Select</Button>
+                  <p className="text-2xl font-bold">$768</p>
+                  <p className="text-sm text-muted-foreground">$32 per stream</p>
                 </div>
               </div>
-              <div className="flex flex-col rounded-lg border p-6">
+              <div className="flex flex-col rounded-lg border p-6 h-full">
                 <div className="mb-4">
-                  <h3 className="text-lg font-bold">100+ streams</h3>
-                  <p className="text-sm text-muted-foreground">Custom package for high volume</p>
+                  <h3 className="text-lg font-bold">48 streams</h3>
+                  <p className="text-sm text-muted-foreground">Great deal for busy seasons</p>
                 </div>
                 <div className="mt-auto">
-                  <p className="text-2xl font-bold">Contact us</p>
-                  <p className="text-sm text-muted-foreground">For custom pricing</p>
-                  <Button className="w-full mt-4 bg-orange-500 hover:bg-orange-600">Contact</Button>
+                  <p className="text-2xl font-bold">$1,344</p>
+                  <p className="text-sm text-muted-foreground">$28 per stream</p>
+                </div>
+              </div>
+              <div className="flex flex-col rounded-lg border p-6 h-full">
+                <div className="mb-4">
+                  <h3 className="text-lg font-bold">96 streams</h3>
+                  <p className="text-sm text-muted-foreground">Best value for large campaigns</p>
+                </div>
+                <div className="mt-auto">
+                  <p className="text-2xl font-bold">$2,400</p>
+                  <p className="text-sm text-muted-foreground">$25 per stream</p>
                 </div>
               </div>
             </div>
@@ -277,7 +293,7 @@ export default function LandingPage() {
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                   How do you want your brand to appear?
                 </h2>
-                <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="mx-auto text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Choose from multiple ad formats that integrate seamlessly with live game streams
                 </p>
               </div>
@@ -289,7 +305,7 @@ export default function LandingPage() {
                     src="/video.png"
                     alt="Pre-roll Video Example"
                     width={320}
-                    height={250}
+                    height={220}
                     className="w-full h-auto object-contain rounded-md"
                     priority={false}
                   />
@@ -305,7 +321,7 @@ export default function LandingPage() {
                     src="/BannerOverlay.png"
                     alt="Banner Overlay Example"
                     width={320}
-                    height={180}
+                    height={200}
                     className="w-full h-auto object-contain"
                     priority={false}
                   />
@@ -321,7 +337,7 @@ export default function LandingPage() {
                     src="/picture-in-picture.png"
                     alt="Picture-in-Picture Example"
                     width={320}
-                    height={180}
+                    height={200}
                     className="w-full h-auto object-contain"
                     priority={false}
                   />
@@ -337,7 +353,7 @@ export default function LandingPage() {
                     src="/halftime.png"
                     alt="Halftime Takeover Example"
                     width={320}
-                    height={240}
+                    height={220}
                     className="w-full h-auto object-contain rounded-md"
                     priority={false}
                   />
@@ -346,18 +362,6 @@ export default function LandingPage() {
                 <p className="text-center text-sm text-muted-foreground">
                   Full-screen ad that appears during halftime break
                 </p>
-              </div>
-            </div>
-            <div className="mt-12">
-              <div className="mx-auto rounded-xl overflow-hidden w-[900px]">
-                <Image
-                  src="/live.png"
-                  alt="Soccer game livestream with sponsor overlay"
-                  width={900}
-                  height={506}
-                  className="w-full h-auto"
-                  priority
-                />
               </div>
             </div>
           </div>
@@ -438,11 +442,11 @@ export default function LandingPage() {
                     <select
                       id="business-type"
                       name="businessType"
-                      className="w-full rounded-md bg-zinc-900 text-gray-400 px-3 py-3 pr-12 border border-white focus:outline-none focus:ring-2 focus:ring-zinc-500 transition appearance-none"
+                      className="w-full rounded-md bg-zinc-900 text-[rgb(140,139,141)] px-3 py-3 pr-12 border border-white focus:outline-none focus:ring-2 focus:ring-zinc-500 transition appearance-none"
                       required
                       defaultValue=""
                     >
-                      <option value="" disabled>Select business type</option>
+                      <option value="" disabled style={{ color: 'rgb(140,139,141)' }}>Select business type</option>
                       <option value="retail">Retail Store</option>
                       <option value="restaurant">Restaurant/Food Service</option>
                       <option value="service">Service Business</option>
@@ -479,21 +483,22 @@ export default function LandingPage() {
                 </div>
                 <div>
                   <label htmlFor="budget" className="block text-sm font-medium mb-1">
-                    Estimated Monthly Budget
+                    Select a Sponsorship Package
                   </label>
                   <div className="relative">
                     <select
                       id="budget"
                       name="budget"
-                      className="w-full rounded-md bg-zinc-900 text-gray-400 px-3 py-3 pr-12 border border-white focus:outline-none focus:ring-2 focus:ring-zinc-500 transition appearance-none"
+                      className="w-full rounded-md bg-zinc-900 text-[rgb(140,139,141)] px-3 py-3 pr-12 border border-white focus:outline-none focus:ring-2 focus:ring-zinc-500 transition appearance-none"
                       required
                       defaultValue=""
                     >
-                      <option value="" disabled>Select budget range</option>
-                      <option value="under-200">Under $200</option>
-                      <option value="200-500">$200 – $500</option>
-                      <option value="500-1000">$500 – $1,000</option>
-                      <option value="over-1000">Over $1,000</option>
+                      <option value="" disabled style={{ color: 'rgb(140,139,141)' }}>Select a package</option>
+                      <option value="4-streams">4 streams – $99</option>
+                      <option value="12-streams">12 streams – $420</option>
+                      <option value="24-streams">24 streams – $768</option>
+                      <option value="48-streams">48 streams – $1,344</option>
+                      <option value="96-streams">96 streams – $2,400</option>
                     </select>
                     <svg className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
@@ -570,7 +575,7 @@ export default function LandingPage() {
         </section>
 
         {/* FAQ Section */}
-        <section id="faq" className="w-full py-12 md:py-24 lg:py-32 bg-slate-900 text-white">
+        <section id="faq" className="w-full py-12 md:py-24 lg:py-32 bg-black text-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
