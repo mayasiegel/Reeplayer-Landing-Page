@@ -11,30 +11,69 @@ import { ArrowRight, CheckCircle, BarChart, Users, Play, Clock } from "lucide-re
 
 export default function LandingPage() {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col bg-gradient-to-b from-black to-zinc-900 text-white">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-20 items-center justify-between px-6 md:px-12">
-          <div className="flex items-center gap-3 font-bold text-2xl">
-            <span className="text-[#2563EB]">Reeplayer</span>
-            <span>Sponsorships</span>
+        <div className="w-full flex h-20 items-center justify-between px-6 md:px-12">
+          <div className="flex items-center gap-3">
+            <Image
+              src="/logo.png"
+              alt="Reeplayer Logo"
+              width={160}
+              height={48}
+              priority
+            />
           </div>
-          <nav className="hidden md:flex gap-8">
-            <Link href="#benefits" className="text-sm md:text-base font-semibold hover:text-[#2563EB] hover:underline underline-offset-8 transition-colors duration-150">
-              Benefits
-            </Link>
-            <Link href="#how-it-works" className="text-sm md:text-base font-semibold hover:text-[#2563EB] hover:underline underline-offset-8 transition-colors duration-150">
-              How It Works
-            </Link>
-            <Link href="#ad-formats" className="text-sm md:text-base font-semibold hover:text-[#2563EB] hover:underline underline-offset-8 transition-colors duration-150">
-              Ad Formats
-            </Link>
-            <Link href="#faq" className="text-sm md:text-base font-semibold hover:text-[#2563EB] hover:underline underline-offset-8 transition-colors duration-150">
-              FAQ
-            </Link>
-          </nav>
+          <div className="flex-1 flex justify-center">
+            <nav className="flex gap-8">
+              <a
+                href="#benefits"
+                className="text-sm md:text-base font-semibold hover:text-black hover:underline underline-offset-8 decoration-black transition-colors duration-150 cursor-pointer"
+                onClick={e => {
+                  e.preventDefault();
+                  const el = document.getElementById('benefits');
+                  if (el) el.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                Benefits
+              </a>
+              <a
+                href="#how-it-works"
+                className="text-sm md:text-base font-semibold hover:text-black hover:underline underline-offset-8 decoration-black transition-colors duration-150 cursor-pointer"
+                onClick={e => {
+                  e.preventDefault();
+                  const el = document.getElementById('how-it-works');
+                  if (el) el.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                How It Works
+              </a>
+              <a
+                href="#ad-formats"
+                className="text-sm md:text-base font-semibold hover:text-black hover:underline underline-offset-8 decoration-black transition-colors duration-150 cursor-pointer"
+                onClick={e => {
+                  e.preventDefault();
+                  const el = document.getElementById('ad-formats');
+                  if (el) el.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                Ad Formats
+              </a>
+              <a
+                href="#faq"
+                className="text-sm md:text-base font-semibold hover:text-black hover:underline underline-offset-8 decoration-black transition-colors duration-150 cursor-pointer"
+                onClick={e => {
+                  e.preventDefault();
+                  const el = document.getElementById('faq');
+                  if (el) el.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                FAQ
+              </a>
+            </nav>
+          </div>
           <div className="flex items-center">
             <Button
-              className="bg-[#2563EB] hover:bg-[#1d4ed8] text-white px-6 py-2 rounded-md shadow-md font-semibold transition-colors duration-150"
+              className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-md shadow-md font-semibold transition-colors duration-150"
               onClick={() => {
                 const el = document.getElementById('signup-section');
                 if (el) el.scrollIntoView({ behavior: 'smooth' });
@@ -47,19 +86,26 @@ export default function LandingPage() {
       </header>
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 relative flex items-center justify-center min-h-[400px] bg-slate-50">
+        <section className="w-full py-12 md:py-24 lg:py-32 relative flex items-center justify-center min-h-[400px] bg-black overflow-hidden">
           <div className="absolute inset-0 z-0">
-            {/* Image or graphic can be added here later */}
+            <Image
+              src="/hero.png"
+              alt="Soccer field background"
+              fill
+              className="object-cover object-[center_30%] w-full h-full"
+              priority
+            />
+            <div className="absolute inset-0 bg-black/60" />
           </div>
           <div className="container mx-auto relative z-10 px-4 md:px-6 flex flex-col items-start justify-center text-left max-w-3xl ml-8">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter text-black mb-6">
-              Local Businesses: Sponsor Live Youth Soccer
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter text-white mb-6">
+              Sponsor live-streamed youth soccer games watched by families in your community
             </h1>
-            <p className="max-w-xl text-lg md:text-xl text-black/80 mb-8">
-              Connect with families and fans by sponsoring live-streamed youth soccer games. Support local teams while growing your business.
+            <p className="max-w-xl text-lg md:text-xl text-white/80 mb-8">
+            Your brand will be seen on screens throughout the season — earning trust, building recognition, and connecting with real local customers while supporting youth sports.
             </p>
             <Button
-              className="bg-[#2563EB] hover:bg-[#1d4ed8] text-white px-8 py-3 rounded-lg font-semibold text-lg shadow transition-colors duration-150"
+              className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold text-lg shadow transition-colors duration-150"
               onClick={() => {
                 const el = document.getElementById('signup-section');
                 if (el) el.scrollIntoView({ behavior: 'smooth' });
@@ -86,7 +132,7 @@ export default function LandingPage() {
             <div className="grid grid-cols-1 gap-8 md:grid-cols-3 mt-12 max-w-5xl mx-auto">
               <div className="flex flex-col items-center space-y-4 rounded-lg border p-6">
                 <div className="rounded-full bg-[#2563EB]/10 p-4">
-                  <Users className="h-6 w-6 text-[#2563EB]" />
+                  <Users className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold">Targeted Local Reach</h3>
                 <p className="text-center text-muted-foreground">
@@ -95,7 +141,7 @@ export default function LandingPage() {
               </div>
               <div className="flex flex-col items-center space-y-4 rounded-lg border p-6">
                 <div className="rounded-full bg-[#2563EB]/10 p-4">
-                  <CheckCircle className="h-6 w-6 text-[#2563EB]" />
+                  <CheckCircle className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold">Community Goodwill</h3>
                 <p className="text-center text-muted-foreground">
@@ -104,7 +150,7 @@ export default function LandingPage() {
               </div>
               <div className="flex flex-col items-center space-y-4 rounded-lg border p-6">
                 <div className="rounded-full bg-[#2563EB]/10 p-4">
-                  <BarChart className="h-6 w-6 text-[#2563EB]" />
+                  <BarChart className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold">Measurable Results</h3>
                 <p className="text-center text-muted-foreground">
@@ -116,7 +162,7 @@ export default function LandingPage() {
         </section>
 
         {/* How It Works Section */}
-        <section id="how-it-works" className="w-full py-12 md:py-24 lg:py-32 bg-slate-50">
+        <section id="how-it-works" className="w-full py-12 md:py-24 lg:py-32 bg-zinc-900">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -128,7 +174,7 @@ export default function LandingPage() {
             </div>
             <div className="mx-auto grid max-w-5xl items-start gap-6 py-12 md:grid-cols-3 md:gap-12">
               <div className="grid gap-2 text-center">
-                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#2563EB] text-xl font-bold text-white">
+                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-white text-xl font-bold text-black">
                   1
                 </div>
                 <h3 className="text-xl font-bold">Choose Your Package</h3>
@@ -137,7 +183,7 @@ export default function LandingPage() {
                 </p>
               </div>
               <div className="grid gap-2 text-center">
-                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#2563EB] text-xl font-bold text-white">
+                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-white text-xl font-bold text-black">
                   2
                 </div>
                 <h3 className="text-xl font-bold">Create Your Ad</h3>
@@ -146,7 +192,7 @@ export default function LandingPage() {
                 </p>
               </div>
               <div className="grid gap-2 text-center">
-                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#2563EB] text-xl font-bold text-white">
+                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-white text-xl font-bold text-black">
                   3
                 </div>
                 <h3 className="text-xl font-bold">Measure Results</h3>
@@ -180,11 +226,11 @@ export default function LandingPage() {
                 <div className="mt-auto">
                   <p className="text-2xl font-bold">$199</p>
                   <p className="text-sm text-muted-foreground">$19.90 per stream</p>
-                  <Button className="w-full mt-4 bg-[#2563EB] hover:bg-[#1d4ed8]">Select</Button>
+                  <Button className="w-full mt-4 bg-orange-500 hover:bg-orange-600">Select</Button>
                 </div>
               </div>
-              <div className="flex flex-col rounded-lg border p-6 border-[#2563EB] shadow-md relative">
-                <div className="absolute -top-3 right-4 bg-[#2563EB] text-white text-xs px-3 py-1 rounded-full">
+              <div className="flex flex-col rounded-lg border p-6 border-white shadow-md relative">
+                <div className="absolute -top-3 right-4 bg-white text-black text-xs px-3 py-1 rounded-full">
                   Popular
                 </div>
                 <div className="mb-4">
@@ -194,7 +240,7 @@ export default function LandingPage() {
                 <div className="mt-auto">
                   <p className="text-2xl font-bold">$399</p>
                   <p className="text-sm text-muted-foreground">$15.96 per stream</p>
-                  <Button className="w-full mt-4 bg-[#2563EB] hover:bg-[#1d4ed8]">Select</Button>
+                  <Button className="w-full mt-4 bg-orange-500 hover:bg-orange-600">Select</Button>
                 </div>
               </div>
               <div className="flex flex-col rounded-lg border p-6">
@@ -205,7 +251,7 @@ export default function LandingPage() {
                 <div className="mt-auto">
                   <p className="text-2xl font-bold">$699</p>
                   <p className="text-sm text-muted-foreground">$13.98 per stream</p>
-                  <Button className="w-full mt-4 bg-[#2563EB] hover:bg-[#1d4ed8]">Select</Button>
+                  <Button className="w-full mt-4 bg-orange-500 hover:bg-orange-600">Select</Button>
                 </div>
               </div>
               <div className="flex flex-col rounded-lg border p-6">
@@ -216,7 +262,7 @@ export default function LandingPage() {
                 <div className="mt-auto">
                   <p className="text-2xl font-bold">Contact us</p>
                   <p className="text-sm text-muted-foreground">For custom pricing</p>
-                  <Button className="w-full mt-4 bg-[#2563EB] hover:bg-[#1d4ed8]">Contact</Button>
+                  <Button className="w-full mt-4 bg-orange-500 hover:bg-orange-600">Contact</Button>
                 </div>
               </div>
             </div>
@@ -224,7 +270,7 @@ export default function LandingPage() {
         </section>
 
         {/* Ad Formats Section */}
-        <section id="ad-formats" className="w-full py-12 md:py-24 lg:py-32 bg-slate-50">
+        <section id="ad-formats" className="w-full py-12 md:py-24 lg:py-32 bg-zinc-900">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -237,38 +283,64 @@ export default function LandingPage() {
               </div>
             </div>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-4 mt-12 max-w-5xl mx-auto">
-              <div className="flex flex-col items-center space-y-4 rounded-lg border bg-white p-6">
-                <div className="aspect-video w-full bg-slate-100 rounded-md flex items-center justify-center">
-                  <Play className="h-8 w-8 text-slate-400" />
+              <div className="flex flex-col items-center space-y-4 rounded-lg border bg-zinc-900 p-6">
+                <div className="aspect-video w-full flex items-center justify-center">
+                  <Image
+                    src="/video.png"
+                    alt="Pre-roll Video Example"
+                    width={320}
+                    height={250}
+                    className="w-full h-auto object-contain rounded-md"
+                    priority={false}
+                  />
                 </div>
                 <h3 className="text-lg font-bold">Pre-roll Video</h3>
                 <p className="text-center text-sm text-muted-foreground">
                   15-30 second video ad that plays before the livestream begins
                 </p>
               </div>
-              <div className="flex flex-col items-center space-y-4 rounded-lg border bg-white p-6">
-                <div className="aspect-video w-full bg-slate-100 rounded-md flex items-center justify-center">
-                  <span className="text-xs text-slate-400">Banner Ad</span>
+              <div className="flex flex-col items-center space-y-4 rounded-lg border bg-zinc-900 p-6">
+                <div className="aspect-video w-full flex items-center justify-center">
+                  <Image
+                    src="/BannerOverlay.png"
+                    alt="Banner Overlay Example"
+                    width={320}
+                    height={180}
+                    className="w-full h-auto object-contain"
+                    priority={false}
+                  />
                 </div>
                 <h3 className="text-lg font-bold">Banner Overlay</h3>
                 <p className="text-center text-sm text-muted-foreground">
                   Persistent banner that appears at the bottom of the livestream
                 </p>
               </div>
-              <div className="flex flex-col items-center space-y-4 rounded-lg border bg-white p-6">
-                <div className="aspect-video w-full bg-slate-100 rounded-md flex items-center justify-center relative">
-                  <div className="absolute top-2 right-2 h-1/3 w-1/3 bg-slate-200 rounded flex items-center justify-center">
-                    <span className="text-xs text-slate-400">Logo</span>
-                  </div>
+              <div className="flex flex-col items-center space-y-4 rounded-lg border bg-zinc-900 p-6">
+                <div className="aspect-video w-full flex items-center justify-center">
+                  <Image
+                    src="/picture-in-picture.png"
+                    alt="Picture-in-Picture Example"
+                    width={320}
+                    height={180}
+                    className="w-full h-auto object-contain"
+                    priority={false}
+                  />
                 </div>
                 <h3 className="text-lg font-bold">Picture-in-Picture</h3>
                 <p className="text-center text-sm text-muted-foreground">
                   Your ad appears in a corner while the game continues
                 </p>
               </div>
-              <div className="flex flex-col items-center space-y-4 rounded-lg border bg-white p-6">
-                <div className="aspect-video w-full bg-slate-100 rounded-md flex items-center justify-center">
-                  <Clock className="h-8 w-8 text-slate-400" />
+              <div className="flex flex-col items-center space-y-4 rounded-lg border bg-zinc-900 p-6">
+                <div className="w-full flex items-center justify-center" style={{ aspectRatio: '16/11' }}>
+                  <Image
+                    src="/halftime.png"
+                    alt="Halftime Takeover Example"
+                    width={320}
+                    height={240}
+                    className="w-full h-auto object-contain rounded-md"
+                    priority={false}
+                  />
                 </div>
                 <h3 className="text-lg font-bold">Halftime Takeover</h3>
                 <p className="text-center text-sm text-muted-foreground">
@@ -277,18 +349,15 @@ export default function LandingPage() {
               </div>
             </div>
             <div className="mt-12">
-              <div className="mx-auto max-w-3xl rounded-xl overflow-hidden border">
-                <div className="relative aspect-video bg-slate-800">
-                  <Image
-                    src="/placeholder.svg?height=720&width=1280"
-                    alt="Soccer game livestream with sponsor overlay"
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute bottom-4 right-4 bg-white/80 backdrop-blur-sm rounded-lg px-4 py-2 text-sm font-medium">
-                    Your brand here
-                  </div>
-                </div>
+              <div className="mx-auto rounded-xl overflow-hidden w-[900px]">
+                <Image
+                  src="/live.png"
+                  alt="Soccer game livestream with sponsor overlay"
+                  width={900}
+                  height={506}
+                  className="w-full h-auto"
+                  priority
+                />
               </div>
             </div>
           </div>
@@ -307,7 +376,7 @@ export default function LandingPage() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto max-w-2xl rounded-2xl border bg-white shadow-lg p-8">
+            <div className="mx-auto max-w-2xl rounded-2xl border bg-zinc-900 shadow-lg p-8">
               <form
                 action="https://formspree.io/f/xvgayqrk"
                 method="POST"
@@ -369,7 +438,7 @@ export default function LandingPage() {
                     <select
                       id="business-type"
                       name="businessType"
-                      className="w-full rounded-md border px-3 py-3 pr-12 bg-white text-black focus:outline-none focus:ring-2 focus:ring-[#2563EB] focus:border-[#2563EB] transition appearance-none"
+                      className="w-full rounded-md bg-zinc-900 text-gray-400 px-3 py-3 pr-12 border border-white focus:outline-none focus:ring-2 focus:ring-zinc-500 transition appearance-none"
                       required
                       defaultValue=""
                     >
@@ -416,7 +485,7 @@ export default function LandingPage() {
                     <select
                       id="budget"
                       name="budget"
-                      className="w-full rounded-md border px-3 py-3 pr-12 bg-white text-black focus:outline-none focus:ring-2 focus:ring-[#2563EB] focus:border-[#2563EB] transition appearance-none"
+                      className="w-full rounded-md bg-zinc-900 text-gray-400 px-3 py-3 pr-12 border border-white focus:outline-none focus:ring-2 focus:ring-zinc-500 transition appearance-none"
                       required
                       defaultValue=""
                     >
@@ -448,7 +517,7 @@ export default function LandingPage() {
                     I agree to receive marketing communications from Reeplayer
                   </label>
                 </div>
-                <Button type="submit" className="w-full bg-[#2563EB] hover:bg-[#1d4ed8] text-white font-semibold py-3 rounded-md shadow transition-colors duration-150">
+                <Button type="submit" className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-md shadow transition-colors duration-150">
                   Submit Interest
                 </Button>
               </form>
@@ -458,7 +527,7 @@ export default function LandingPage() {
 
 
         {/* What Happens Next Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-slate-50">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-zinc-900">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
@@ -466,7 +535,7 @@ export default function LandingPage() {
               </div>
             </div>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-3 max-w-5xl mx-auto">
-              <div className="flex flex-col items-start space-y-4 rounded-lg border bg-white p-6">
+              <div className="flex flex-col items-start space-y-4 rounded-lg border bg-zinc-900 p-6">
                 <div className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-red-100 text-red-600 font-bold">
                   1
                 </div>
@@ -476,7 +545,7 @@ export default function LandingPage() {
                   sponsorship options.
                 </p>
               </div>
-              <div className="flex flex-col items-start space-y-4 rounded-lg border bg-white p-6">
+              <div className="flex flex-col items-start space-y-4 rounded-lg border bg-zinc-900 p-6">
                 <div className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-red-100 text-red-600 font-bold">
                   2
                 </div>
@@ -486,7 +555,7 @@ export default function LandingPage() {
                   provide your own creative.
                 </p>
               </div>
-              <div className="flex flex-col items-start space-y-4 rounded-lg border bg-white p-6">
+              <div className="flex flex-col items-start space-y-4 rounded-lg border bg-zinc-900 p-6">
                 <div className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-red-100 text-red-600 font-bold">
                   3
                 </div>
@@ -535,7 +604,7 @@ export default function LandingPage() {
               <div className="space-y-2">
                 <h3 className="text-xl font-bold">How far in advance do I need to submit my ad materials?</h3>
                 <p className="text-slate-300">
-                  For best results, we recommend submitting your ad materials at least 5 business days before your first
+                  For best results, we recommend submitting your ad materials at least 14 business days before your first
                   sponsored stream. This gives our team time to ensure everything looks perfect.
                 </p>
               </div>
@@ -564,7 +633,7 @@ export default function LandingPage() {
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
                 <Button
-                  className="bg-[#2563EB] hover:bg-[#1d4ed8] text-white px-8 py-3 rounded-lg font-semibold text-lg shadow transition-colors duration-150"
+                  className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold text-lg shadow transition-colors duration-150"
                   onClick={() => {
                     const el = document.getElementById('signup-section');
                     if (el) el.scrollIntoView({ behavior: 'smooth' });
@@ -572,15 +641,12 @@ export default function LandingPage() {
                 >
                   Become a Sponsor
                 </Button>
-                <Button className="bg-white border border-[#2563EB] text-[#2563EB] px-8 py-3 rounded-lg font-semibold text-lg shadow hover:bg-[#2563EB] hover:text-white transition-colors duration-150">
-                  Contact Sales
-                </Button>
               </div>
             </div>
           </div>
         </section>
       </main>
-      <footer className="w-full border-t py-6 md:py-0 bg-slate-50">
+      <footer className="w-full border-t py-6 md:py-0 bg-zinc-900">
         <div className="container mx-auto flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
           <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
             © {new Date().getFullYear()} Reeplayer. All rights reserved.
