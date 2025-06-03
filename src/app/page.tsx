@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Checkbox } from "@/components/ui/checkbox"
 import { ArrowRight, CheckCircle, BarChart, Users, Play, Clock } from "lucide-react"
+import Script from "next/script";
 
 export default function LandingPage() {
   return (
@@ -120,11 +121,11 @@ export default function LandingPage() {
         <section id="benefits" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
+              <div className="space-y-2 w-full text-center">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                   Why Sponsor Youth Soccer Livestreams?
                 </h2>
-                <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="max-w-[700px] mx-auto text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Reach engaged local families while supporting youth sports in your community
                 </p>
               </div>
@@ -214,8 +215,56 @@ export default function LandingPage() {
           </div>
         </section>
 
+        {/* What Viewers See Section */}
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-black">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center mb-8">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                  What Viewers See
+                </h2>
+                <p className="max-w-[700px] mx-auto text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Real examples from our latest tournament livestream
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-col md:flex-row gap-8 items-center justify-center mb-8">
+              <div className="flex-1 flex flex-col items-center">
+                <Image
+                  src="/tournament/graphic1.png"
+                  alt="Sponsor overlay during live stream"
+                  width={500}
+                  height={300}
+                  className="rounded-lg shadow-lg w-full h-auto object-contain bg-zinc-900 border border-white"
+                />
+                <span className="mt-2 text-sm text-muted-foreground">Sponsor overlay during live stream</span>
+              </div>
+              <div className="flex-1 flex flex-col items-center">
+                <Image
+                  src="/tournament/graphic2.png"
+                  alt="Promo code popup for viewers"
+                  width={500}
+                  height={300}
+                  className="rounded-lg shadow-lg w-full h-auto object-contain bg-zinc-900 border border-white"
+                />
+                <span className="mt-2 text-sm text-muted-foreground">Promo code popup for viewers</span>
+              </div>
+            </div>
+            <div className="flex flex-col md:flex-row gap-8 items-center justify-center mt-8">
+              <div className="flex flex-col items-center bg-zinc-900 rounded-xl px-8 py-6 shadow-md min-w-[220px] mb-4 md:mb-0">
+                <span className="text-4xl font-extrabold text-white">1,116</span>
+                <span className="text-lg text-muted-foreground mt-1">Viewers</span>
+              </div>
+              <div className="flex flex-col items-center bg-zinc-900 rounded-xl px-8 py-6 shadow-md min-w-[220px]">
+                <span className="text-4xl font-extrabold text-white">$1,200</span>
+                <span className="text-lg text-muted-foreground mt-1">Worth of promos claimed</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Sponsorship Options */}
-        <section className="w-full py-12 md:py-24 lg:py-32">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-zinc-900">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -286,7 +335,7 @@ export default function LandingPage() {
         </section>
 
         {/* Ad Formats Section */}
-        <section id="ad-formats" className="w-full py-12 md:py-24 lg:py-32 bg-zinc-900">
+        <section id="ad-formats" className="w-full py-12 md:py-24 lg:py-32 bg-black">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -368,7 +417,7 @@ export default function LandingPage() {
         </section>
 
         {/* Sign Up Form Section */}
-        <section id="signup-section" className="w-full py-12 md:py-24 lg:py-32">
+        <section id="signup-section" className="w-full py-12 md:py-24 lg:py-32 bg-zinc-900">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-8">
               <div className="space-y-2">
@@ -530,9 +579,8 @@ export default function LandingPage() {
           </div>
         </section>
 
-
         {/* What Happens Next Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-zinc-900">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-black">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
@@ -575,7 +623,7 @@ export default function LandingPage() {
         </section>
 
         {/* FAQ Section */}
-        <section id="faq" className="w-full py-12 md:py-24 lg:py-32 bg-black text-white">
+        <section id="faq" className="w-full py-12 md:py-24 lg:py-32 bg-zinc-900 text-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
@@ -625,7 +673,7 @@ export default function LandingPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-black">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -656,19 +704,45 @@ export default function LandingPage() {
           <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
             © {new Date().getFullYear()} Reeplayer. All rights reserved.
           </p>
-          <div className="flex gap-4">
-            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
-              Terms
-            </Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
-              Privacy
-            </Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
-              Contact
-            </Link>
-          </div>
         </div>
       </footer>
+      <Script id="intercom-settings" strategy="afterInteractive">
+  {`
+    window.intercomSettings = {
+      api_base: "https://api-iam.intercom.io",
+      app_id: "ro44m4xf",
+    };
+  `}
+</Script>
+      <Script
+        id="intercom-widget"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            (function(){
+              var w=window;var ic=w.Intercom;
+              if(typeof ic==="function"){
+                ic('reattach_activator');
+                ic('update',w.intercomSettings);
+              }else{
+                var d=document;var i=function(){i.c(arguments);};
+                i.q=[];i.c=function(args){i.q.push(args);};
+                w.Intercom=i;
+                var l=function(){
+                  var s=d.createElement('script');
+                  s.type='text/javascript';s.async=true;
+                  s.src='https://widget.intercom.io/widget/ro44m4xf';
+                  var x=d.getElementsByTagName('script')[0];
+                  x.parentNode.insertBefore(s,x);
+                };
+                if(document.readyState==='complete'){l();}
+                else if(w.attachEvent){w.attachEvent('onload',l);}
+                else{w.addEventListener('load',l,false);}
+              }
+            })();
+          `,
+        }}
+      />
     </div>
   )
 }
