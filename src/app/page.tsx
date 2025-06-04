@@ -524,7 +524,7 @@ export default function LandingPage() {
                   <Input
                     id="team-name"
                     name="teamName"
-                    placeholder="Name of the team you'd like to sponsor"
+                    placeholder="Name of the team you&#39;d like to sponsor"
                     className="w-full rounded-md border px-3 py-2"
                   />
                 </div>
@@ -602,7 +602,7 @@ export default function LandingPage() {
                 </div>
                 <h3 className="text-xl font-bold">Create your ad</h3>
                 <p className="text-muted-foreground">
-                  We'll help you create effective ads that resonate with local families and sports fans, or you can
+                  We&#39;ll help you create effective ads that resonate with local families and sports fans, or you can
                   provide your own creative.
                 </p>
               </div>
@@ -612,7 +612,7 @@ export default function LandingPage() {
                 </div>
                 <h3 className="text-xl font-bold">Go live and see results</h3>
                 <p className="text-muted-foreground">
-                  Your ads will appear in live streams, and you'll receive detailed reports on views, engagement, and
+                  Your ads will appear in live streams, and you&#39;ll receive detailed reports on views, engagement, and
                   performance.
                 </p>
               </div>
@@ -635,7 +635,7 @@ export default function LandingPage() {
                 <h3 className="text-xl font-bold">How many people typically watch these livestreams?</h3>
                 <p className="text-slate-300">
                   On average, each youth soccer game livestream attracts 30-50 viewers, primarily consisting of family
-                  members, friends, and team supporters who can't attend in person.
+                  members, friends, and team supporters who can&#39;t attend in person.
                 </p>
               </div>
               <div className="space-y-2">
@@ -648,7 +648,7 @@ export default function LandingPage() {
               <div className="space-y-2">
                 <h3 className="text-xl font-bold">Can I get detailed metrics about who saw my ads?</h3>
                 <p className="text-slate-300">
-                  Yes, you'll receive comprehensive reports showing view counts, engagement rates, click-through rates
+                  Yes, you&#39;ll receive comprehensive reports showing view counts, engagement rates, click-through rates
                   (for clickable ads), and viewer demographics where available.
                 </p>
               </div>
@@ -660,7 +660,7 @@ export default function LandingPage() {
                 </p>
               </div>
               <div className="space-y-2">
-                <h3 className="text-xl font-bold">What if I don't have professional ad creative?</h3>
+                <h3 className="text-xl font-bold">What if I don&#39;t have professional ad creative?</h3>
                 <p className="text-slate-300">
                   No problem! We offer simple tools to help you create professional-looking ads, including templates and
                   an AI-assisted design tool that can generate ads based on your business information.
