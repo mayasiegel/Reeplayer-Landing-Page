@@ -1,13 +1,13 @@
 "use client";
 
-import Link from "next/link"
+// import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+// import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Checkbox } from "@/components/ui/checkbox"
-import { ArrowRight, CheckCircle, BarChart, Users, Play, Clock } from "lucide-react"
+import { CheckCircle, BarChart, Users } from "lucide-react"
 import Script from "next/script";
 
 export default function LandingPage() {
