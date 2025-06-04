@@ -381,7 +381,7 @@ export default function LandingPage() {
               <div className="flex flex-col items-center space-y-4 rounded-lg border bg-zinc-900 p-6">
                 <div className="aspect-video w-full flex items-center justify-center">
                   <Image
-                    src="/picture-in-picture.png"
+                    src="/Picture-in-Picture.png"
                     alt="Picture-in-Picture Example"
                     width={320}
                     height={200}
@@ -442,7 +442,7 @@ export default function LandingPage() {
                     name="businessName"
                     placeholder="Your business name"
                     required
-                    className="w-full rounded-md border px-3 py-2"
+                    className="w-full rounded-md border border-white focus:border-white !border-white px-3 py-2 bg-zinc-900 focus:bg-zinc-900 text-white"
                   />
                 </div>
                 <div>
@@ -455,7 +455,7 @@ export default function LandingPage() {
                     type="email"
                     placeholder="you@example.com"
                     required
-                    className="w-full rounded-md border px-3 py-2"
+                    className="w-full rounded-md border border-white focus:border-white !border-white px-3 py-2 bg-zinc-900 focus:bg-zinc-900 text-white"
                   />
                 </div>
                 <div>
@@ -467,7 +467,7 @@ export default function LandingPage() {
                     name="phone"
                     type="tel"
                     placeholder="(555) 555-5555"
-                    className="w-full rounded-md border px-3 py-2"
+                    className="w-full rounded-md border border-white focus:border-white !border-white px-3 py-2 bg-zinc-900 focus:bg-zinc-900 text-white"
                   />
                 </div>
                 <div>
@@ -478,7 +478,7 @@ export default function LandingPage() {
                     id="location"
                     name="location"
                     placeholder="City, State"
-                    className="w-full rounded-md border px-3 py-2"
+                    className="w-full rounded-md border border-white focus:border-white !border-white px-3 py-2 bg-zinc-900 focus:bg-zinc-900 text-white"
                   />
                 </div>
                 <div>
@@ -514,7 +514,7 @@ export default function LandingPage() {
                     id="team-preference"
                     name="teamPreference"
                     placeholder="Do you have a specific team in mind?"
-                    className="w-full rounded-md border px-3 py-2"
+                    className="w-full rounded-md border border-white focus:border-white !border-white px-3 py-2 bg-zinc-900 focus:bg-zinc-900 text-white"
                   />
                 </div>
                 <div>
@@ -525,7 +525,7 @@ export default function LandingPage() {
                     id="team-name"
                     name="teamName"
                     placeholder="Name of the team you&#39;d like to sponsor"
-                    className="w-full rounded-md border px-3 py-2"
+                    className="w-full rounded-md border border-white focus:border-white !border-white px-3 py-2 bg-zinc-900 focus:bg-zinc-900 text-white"
                   />
                 </div>
                 <div>
@@ -560,7 +560,7 @@ export default function LandingPage() {
                     id="message"
                     name="message"
                     placeholder="Tell us more about your business and sponsorship goals..."
-                    className="w-full rounded-md border px-3 py-2 min-h-[100px]"
+                    className="w-full rounded-md border border-white focus:border-white !border-white px-3 py-2 min-h-[100px] bg-zinc-900 focus:bg-zinc-900 text-white"
                   />
                 </div>
                 <div className="flex items-center space-x-2">
